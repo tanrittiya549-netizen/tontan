@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff9e6;
+    font-family: 'Kanit', sans-serif;
+}
+
+nav {
+    background-color: #ffd700;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.cart {
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #ffd700;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ffed4a;
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    padding: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-total {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}

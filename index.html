@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านขนมปัง</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🍞 ร้านขนมปังแสนอร่อย</div>
+        <div class="cart" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <h2>ตะกร้าสินค้า</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            ยอดรวม: ฿<span id="total-amount">0</span>
+        </div>
+        <button onclick="checkout()" class="checkout-btn">ชำระเงิน</button>
+    </div>
+
+    <div class="products">
+        <div class="product-card">
+            <img src="https://www.utray.co.th/upload/images/delicious-bread-table.jpg" alt="ขนมปังขาว">
+            <h3>ขนมปังขาว</h3>
+            <p>฿35.00</p>
+            <button onclick="addToCart(1, 'ขนมปังขาว', 35)">เพิ่มลงตะกร้า</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/200x200/8B4513/FFF?text=ขนมปังโฮลวีต" alt="ขนมปังโฮลวีต">
+            <h3>ขนมปังโฮลวีต</h3>
+            <p>฿45.00</p>
+            <button onclick="addToCart(2, 'ขนมปังโฮลวีต', 45)">เพิ่มลงตะกร้า</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/200x200/FFB6C1/FFF?text=ขนมปังสตรอเบอร์รี่" alt="ขนมปังสตรอเบอร์รี่">
+            <h3>ขนมปังสตรอเบอร์รี่</h3>
+            <p>฿55.00</p>
+            <button onclick="addToCart(3, 'ขนมปังสตรอเบอร์รี่', 55)">เพิ่มลงตะกร้า</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
